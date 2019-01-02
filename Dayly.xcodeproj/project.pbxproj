@@ -25,6 +25,13 @@
 		8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA441A22EA431C0071671F /* StartViewController.swift */; };
 		8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */; };
 		A5E5A30A22FE0021003DF04D /* MoreInfoStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */; };
+		A5E5A30C23020F23003DF04D /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A30B23020F23003DF04D /* BMIViewController.swift */; };
+		A5E5A30E2302248B003DF04D /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A30D2302248B003DF04D /* Step3ViewController.swift */; };
+		A5E5A31023030738003DF04D /* MaintainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A30F23030738003DF04D /* MaintainViewController.swift */; };
+		A5E5A31223030907003DF04D /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A31123030907003DF04D /* LoseViewController.swift */; };
+		A5E5A34E23031C79003DF04D /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A34D23031C79003DF04D /* BMI.swift */; };
+		A5E5A350230323E0003DF04D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A34F230323E0003DF04D /* ProfileViewController.swift */; };
+		A5E5A35223032A2D003DF04D /* FoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */; };
 		C2B7DBB911D0C6E0DEE7BEF2 /* Pods_Dayly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBE8552274DD5620D830557 /* Pods_Dayly.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +83,13 @@
 		8E6EC4239F39134B6B61F12C /* Pods-DaylyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyUITests.release.xcconfig"; path = "Target Support Files/Pods-DaylyUITests/Pods-DaylyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96373128A5928B3DEED9C505 /* Pods-DaylyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyTests.release.xcconfig"; path = "Target Support Files/Pods-DaylyTests/Pods-DaylyTests.release.xcconfig"; sourceTree = "<group>"; };
 		A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoStep2.swift; sourceTree = "<group>"; };
+		A5E5A30B23020F23003DF04D /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
+		A5E5A30D2302248B003DF04D /* Step3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
+		A5E5A30F23030738003DF04D /* MaintainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintainViewController.swift; sourceTree = "<group>"; };
+		A5E5A31123030907003DF04D /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
+		A5E5A34D23031C79003DF04D /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		A5E5A34F230323E0003DF04D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogViewController.swift; sourceTree = "<group>"; };
 		F4E9E22C2F37941EF459A009 /* Pods-Dayly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dayly.debug.xcconfig"; path = "Target Support Files/Pods-Dayly/Pods-Dayly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +163,13 @@
 				8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */,
 				8CF0AA1022D7D36800A5D17E /* ViewController.swift */,
 				8CF0AA1222D7D36800A5D17E /* Main.storyboard */,
+				A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */,
+				A5E5A34F230323E0003DF04D /* ProfileViewController.swift */,
+				A5E5A34D23031C79003DF04D /* BMI.swift */,
+				A5E5A31123030907003DF04D /* LoseViewController.swift */,
+				A5E5A30F23030738003DF04D /* MaintainViewController.swift */,
+				A5E5A30B23020F23003DF04D /* BMIViewController.swift */,
+				A5E5A30D2302248B003DF04D /* Step3ViewController.swift */,
 				8CF2E60A22F8D61E00A3BC2A /* MoreInfoViewController.swift */,
 				8CF0AA1522D7D36D00A5D17E /* Assets.xcassets */,
 				8CF0AA1722D7D36E00A5D17E /* LaunchScreen.storyboard */,
@@ -416,13 +437,20 @@
 			files = (
 				8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */,
 				8CEF984722EE65A60093DB5B /* MDViewController.swift in Sources */,
+				A5E5A30E2302248B003DF04D /* Step3ViewController.swift in Sources */,
+				A5E5A31223030907003DF04D /* LoseViewController.swift in Sources */,
 				8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */,
 				8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */,
+				A5E5A350230323E0003DF04D /* ProfileViewController.swift in Sources */,
 				8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */,
 				8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */,
+				A5E5A35223032A2D003DF04D /* FoodLogViewController.swift in Sources */,
+				A5E5A30C23020F23003DF04D /* BMIViewController.swift in Sources */,
 				8CF2E60B22F8D61F00A3BC2A /* MoreInfoViewController.swift in Sources */,
+				A5E5A34E23031C79003DF04D /* BMI.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
 				8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */,
+				A5E5A31023030738003DF04D /* MaintainViewController.swift in Sources */,
 				A5E5A30A22FE0021003DF04D /* MoreInfoStep2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

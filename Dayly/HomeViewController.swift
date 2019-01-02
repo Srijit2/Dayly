@@ -10,11 +10,17 @@ import UIKit
 import Firebase
 
 class HomeViewController: ViewController {
-
+    @IBOutlet weak var logOut: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        addDesigns()
+    }
+    
+    func addDesigns(){
+        Designs.styleFilledButton(logOut)
     }
     @IBAction func logOutAction(_ sender: Any) {
         do {

@@ -309,6 +309,140 @@ let db = Firestore.firestore()
     }
 
     @IBAction func getData(_ sender: Any) {
+        var next = true
+        if self.DOBDay.text!.isInt{
+            if  Int(self.DOBDay.text!) ?? 32 <= 31{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for day of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for day of birth", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if self.DOBMonth.text!.isInt{
+            if  Int(self.DOBMonth.text!) ?? 32 <= 12{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Month of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Month of birth", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if self.DOBYear.text!.isInt{
+            if  Int(self.DOBYear.text!) ?? 2020 <= 2019 && Int(self.DOBYear.text!) ?? 1899 >= 1900{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of birth", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if male || female || other{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a gender", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if availableSome || availableAll{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide availability", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if contactMeButton || contactOfficeButton || socialButton{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide contacts", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if board || noBoard || nonBoard{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide contacts", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if self.boardText.text!.isInt{
+            if  Int(self.DOBYear.text!) ?? 2020 <= 2019 && Int(self.DOBYear.text!) ?? 1899 >= 1900{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of certification", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of certification", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if next {
         if let user = user{
             
             let id = (SignUpViewController.ref?.documentID)!
@@ -320,7 +454,9 @@ let db = Firestore.firestore()
                 "noBoard": self.noBoard,
                 "nonBoard": self.nonBoard,
                 "whenBoard": self.boardText.text!])
+             self.performSegue(withIdentifier: "step2", sender: self)
         }
+    }
     }
     /*
     // MARK: - Navigation

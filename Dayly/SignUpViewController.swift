@@ -207,23 +207,131 @@ class SignUpViewController: ViewController {
     
  
     @IBAction func createUser(_ sender: Any) {
+        var next = true
         let db = Firestore.firestore()
-        if false {
-            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+        
+        
+        if self.DOBDay.text!.isInt{
+            if  Int(self.DOBDay.text!) ?? 32 <= 31{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for day of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for day of birth", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if self.DOBMonth.text!.isInt{
+            if  Int(self.DOBMonth.text!) ?? 32 <= 12{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Month of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Month of birth", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if self.DOBYear.text!.isInt{
+            if  Int(self.DOBYear.text!) ?? 2020 <= 2019 && Int(self.DOBYear.text!) ?? 1899 >= 1900{
+                next = true
+            }else{
+                next = false
+                let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of birth", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a vaild number for Year of birth", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if maleButton || femaleButton || otherButton{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a gender", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if MDButton || vistorButton || otherButton{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please provide a position", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if tosButton{
+            next = true
+        }else{
+            next = false
+            let alertController = UIAlertController(title: "Error", message: "Please accept the TOS", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        if !next {
+//            let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//
+//            alertController.addAction(defaultAction)
+//            self.present(alertController, animated: true, completion: nil)
+            print(next)
+            print(5)
         }
         else{
-            let emailID = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            print(next)
             Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in
                 if error == nil {
+                    print("here")
                     SignUpViewController.ref = db.collection("users").document()
                     SignUpViewController.ref!.setData([
                         "email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.maleButton, "female": self.femaleButton, "other": self.otherButton, "MD": self.MDButton,"visitor": self.vistorButton,"patient": self.patientButton, "tos": self.tosButton,
                         "DOBYear": self.DOBYear.text!,
                         "uid": user!.user.uid])
+                    print("now")
+                    
 //                    SignUpViewController.ref =  db.collection("users").addDocument(data: ["email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.maleButton, "female": self.femaleButton, "other": self.otherButton, "MD": self.MDButton,"visitor": self.vistorButton,"patient": self.patientButton, "tos": self.tosButton,
 //                                                              "DOBYear": self.DOBYear.text!,
 //                                                              "uid": user!.user.uid]){(error) in
@@ -232,9 +340,18 @@ class SignUpViewController: ViewController {
 //                                                                }
 //
 //                    }
-                    self.performSegue(withIdentifier: "signupToHome", sender: self)
+                    if(self.MDButton){
+                        print("x")
+                        self.performSegue(withIdentifier: "MD", sender: self)
+                        print("x")
+                    }else{
+                        print("y")
+                        self.performSegue(withIdentifier: "signupToHome", sender: self)
+                        print("y")
+                    }
                 }
                 else{
+                    print("s")
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     
@@ -258,4 +375,11 @@ class SignUpViewController: ViewController {
     }
     */
 
+}
+
+
+extension String {
+    var isInt: Bool {
+        return Int(self) != nil
+    }
 }
