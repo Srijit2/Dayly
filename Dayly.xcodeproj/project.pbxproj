@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		71B05D1CF6FD28FAA2056F2F /* Pods_DaylyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777444D433D17CACAFBF5AF3 /* Pods_DaylyUITests.framework */; };
 		8A70C20BBA5C32B2CB047564 /* Pods_DaylyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A415EDEE11B7788ED145B4E /* Pods_DaylyTests.framework */; };
+		8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */; };
+		8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */; };
 		8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */; };
 		8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA1022D7D36800A5D17E /* ViewController.swift */; };
 		8CF0AA1422D7D36800A5D17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0AA1222D7D36800A5D17E /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		777444D433D17CACAFBF5AF3 /* Pods_DaylyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaylyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4947B18777FE13D63BA30B /* Pods-DaylyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyTests.debug.xcconfig"; path = "Target Support Files/Pods-DaylyTests/Pods-DaylyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EBE8552274DD5620D830557 /* Pods_Dayly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dayly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CF0AA0B22D7D36800A5D17E /* Dayly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dayly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF0AA1022D7D36800A5D17E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 				04C79768D8023104D5775BEC /* Pods-DaylyUITests.debug.xcconfig */,
 				8E6EC4239F39134B6B61F12C /* Pods-DaylyUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,12 +134,14 @@
 			isa = PBXGroup;
 			children = (
 				8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */,
+				8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */,
 				8CF0AA1022D7D36800A5D17E /* ViewController.swift */,
 				8CF0AA1222D7D36800A5D17E /* Main.storyboard */,
 				8CF0AA1522D7D36D00A5D17E /* Assets.xcassets */,
 				8CF0AA1722D7D36E00A5D17E /* LaunchScreen.storyboard */,
 				8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */,
 				8CF0AA1A22D7D36E00A5D17E /* Info.plist */,
+				8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */,
 			);
 			path = Dayly;
 			sourceTree = "<group>";
@@ -391,6 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */,
+				8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */,
 				8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
 			);

@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="446.37681159420293" y="-15.401785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="9qc-BG-lTT">
             <objects>
-                <viewController id="DLz-Du-Nff" customClass="ViewController" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DLz-Du-Nff" customClass="SignUpViewController" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vbw-9A-Pbg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpAction:" destination="DLz-Du-Nff" eventType="touchUpInside" id="TLD-zo-mi1"/>
+                                    <action selector="signUpAction:" destination="DLz-Du-Nff" eventType="touchUpInside" id="roh-2E-C97"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNW-w0-1hj">
@@ -100,19 +100,20 @@
                         <viewLayoutGuide key="safeArea" id="QyH-AQ-iDK"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="zNW-w0-1hj" id="kmi-Ma-w0e"/>
-                        <outlet property="password" destination="Y1O-XG-TvC" id="qOK-I3-gsc"/>
-                        <outlet property="passwordConfirm" destination="o9X-ER-IGJ" id="xPG-hw-T6q"/>
+                        <outlet property="confirmPassword" destination="o9X-ER-IGJ" id="zaI-5g-niu"/>
+                        <outlet property="email" destination="zNW-w0-1hj" id="Jkz-0s-yNO"/>
+                        <outlet property="password" destination="Y1O-XG-TvC" id="fEt-3l-Ir8"/>
+                        <outlet property="passwordConfirm" destination="o9X-ER-IGJ" id="FRu-HO-9aU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnf-BH-et1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482.608695652174" y="466.74107142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="NLq-vL-EOC">
             <objects>
-                <viewController id="jQI-A4-ZkC" customClass="ViewController" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jQI-A4-ZkC" customClass="LoginViewController" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWf-2g-bVL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
