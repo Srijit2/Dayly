@@ -12,6 +12,8 @@ import Firebase
 class SignUpViewController: ViewController {
 
    
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var signup: UIButton!
     @IBOutlet weak var passwordConfirm: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -19,6 +21,15 @@ class SignUpViewController: ViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        addDesigns()
+    }
+    
+    func addDesigns(){
+        Designs.styleTextField(email)
+        Designs.styleTextField(password)
+        Designs.styleTextField(passwordConfirm)
+        Designs.styleFilledButton(signup)
+        Designs.styleHollowButton(login)
     }
     
     @IBAction override func signUpAction(_ sender: Any) {

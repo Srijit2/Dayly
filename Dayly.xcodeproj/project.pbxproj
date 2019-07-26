@@ -19,6 +19,9 @@
 		8CF0AA2422D7D36E00A5D17E /* DaylyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA2322D7D36E00A5D17E /* DaylyTests.swift */; };
 		8CF0AA2F22D7D36E00A5D17E /* DaylyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA2E22D7D36E00A5D17E /* DaylyUITests.swift */; };
 		8CF0AA3D22D7D6F000A5D17E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */; };
+		8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8C50E22EA50F300F2CECC /* Designs.swift */; };
+		8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA441A22EA431C0071671F /* StartViewController.swift */; };
+		8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */; };
 		C2B7DBB911D0C6E0DEE7BEF2 /* Pods_Dayly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBE8552274DD5620D830557 /* Pods_Dayly.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		8CF0AA2E22D7D36E00A5D17E /* DaylyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaylyUITests.swift; sourceTree = "<group>"; };
 		8CF0AA3022D7D36E00A5D17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CF8C50E22EA50F300F2CECC /* Designs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designs.swift; sourceTree = "<group>"; };
+		8CFA441A22EA431C0071671F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8E6EC4239F39134B6B61F12C /* Pods-DaylyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyUITests.release.xcconfig"; path = "Target Support Files/Pods-DaylyUITests/Pods-DaylyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96373128A5928B3DEED9C505 /* Pods-DaylyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyTests.release.xcconfig"; path = "Target Support Files/Pods-DaylyTests/Pods-DaylyTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4E9E22C2F37941EF459A009 /* Pods-Dayly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dayly.debug.xcconfig"; path = "Target Support Files/Pods-Dayly/Pods-Dayly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */,
 				8CF0AA1A22D7D36E00A5D17E /* Info.plist */,
 				8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */,
+				8CFA441A22EA431C0071671F /* StartViewController.swift */,
+				8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */,
+				8CF8C50E22EA50F300F2CECC /* Designs.swift */,
 			);
 			path = Dayly;
 			sourceTree = "<group>";
@@ -396,10 +405,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */,
+				8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */,
 				8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */,
 				8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */,
 				8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
+				8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
