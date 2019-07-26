@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="DLz-Du-Nff" kind="show" id="bWV-aq-NuF"/>
+                                    <segue destination="xzN-O5-WCJ" kind="show" id="IBB-OL-dp3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,7 +50,7 @@
                     <connections>
                         <outlet property="login" destination="hRb-Nr-LYs" id="6mB-IS-3S8"/>
                         <outlet property="signup" destination="Xhw-gK-XRF" id="vOS-qH-F9a"/>
-                        <segue destination="xzN-O5-WCJ" kind="show" identifier="alreadyLoggedIn" id="sBy-Nc-mcP"/>
+                        <segue destination="9nS-2c-9P9" kind="show" identifier="alreadyLoggedIn" id="Yxm-cb-d7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ3-DN-PZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1651,8 +1651,8 @@
         <image name="25235" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Xd-yI-Wvl"/>
-        <segue reference="GUh-0j-6Ti"/>
-        <segue reference="rnY-RJ-BDA"/>
+        <segue reference="Yxm-cb-d7C"/>
+        <segue reference="IBB-OL-dp3"/>
+        <segue reference="ioK-dX-cb1"/>
     </inferredMetricsTieBreakers>
 </document>
