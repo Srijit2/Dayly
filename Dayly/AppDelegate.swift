@@ -8,18 +8,38 @@
 
 import UIKit
 import Firebase
+import FacebookCore
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FacebookLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder,
  UIApplicationDelegate {
     var window: UIWindow?
 
-
+    //let loginButton = FBLoginButton()
+    //loginButton.delegate = self
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                                       blue: 252/255, alpha: 1)
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        ApplicationDelegate.shared.application(application,  didFinishLaunchingWithOptions: launchOptions)
+        UILabel.appearance().textColor = UIColor.init(red: 3/255, green: 132/255,
+                                         blue: 252/255, alpha: 1)
+        
+        
         return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = ApplicationDelegate.shared.application(app, open: url, options: options)
+        
+        return handled
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,6 +11,7 @@
 		8A70C20BBA5C32B2CB047564 /* Pods_DaylyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A415EDEE11B7788ED145B4E /* Pods_DaylyTests.framework */; };
 		8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */; };
 		8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */; };
+		8CEF984722EE65A60093DB5B /* MDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF984622EE65A60093DB5B /* MDViewController.swift */; };
 		8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */; };
 		8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA1022D7D36800A5D17E /* ViewController.swift */; };
 		8CF0AA1422D7D36800A5D17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0AA1222D7D36800A5D17E /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		8CF0AA2422D7D36E00A5D17E /* DaylyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA2322D7D36E00A5D17E /* DaylyTests.swift */; };
 		8CF0AA2F22D7D36E00A5D17E /* DaylyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0AA2E22D7D36E00A5D17E /* DaylyUITests.swift */; };
 		8CF0AA3D22D7D6F000A5D17E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */; };
+		8CF2E60B22F8D61F00A3BC2A /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2E60A22F8D61E00A3BC2A /* MoreInfoViewController.swift */; };
 		8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8C50E22EA50F300F2CECC /* Designs.swift */; };
 		8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA441A22EA431C0071671F /* StartViewController.swift */; };
 		8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */; };
@@ -51,6 +53,7 @@
 		7EBE8552274DD5620D830557 /* Pods_Dayly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dayly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8CEF984622EE65A60093DB5B /* MDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDViewController.swift; sourceTree = "<group>"; };
 		8CF0AA0B22D7D36800A5D17E /* Dayly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dayly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF0AA1022D7D36800A5D17E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		8CF0AA2E22D7D36E00A5D17E /* DaylyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaylyUITests.swift; sourceTree = "<group>"; };
 		8CF0AA3022D7D36E00A5D17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CF2E60A22F8D61E00A3BC2A /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		8CF8C50E22EA50F300F2CECC /* Designs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designs.swift; sourceTree = "<group>"; };
 		8CFA441A22EA431C0071671F /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */,
 				8CF0AA1022D7D36800A5D17E /* ViewController.swift */,
 				8CF0AA1222D7D36800A5D17E /* Main.storyboard */,
+				8CF2E60A22F8D61E00A3BC2A /* MoreInfoViewController.swift */,
 				8CF0AA1522D7D36D00A5D17E /* Assets.xcassets */,
 				8CF0AA1722D7D36E00A5D17E /* LaunchScreen.storyboard */,
 				8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */,
@@ -151,6 +156,7 @@
 				8CFA441A22EA431C0071671F /* StartViewController.swift */,
 				8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */,
 				8CF8C50E22EA50F300F2CECC /* Designs.swift */,
+				8CEF984622EE65A60093DB5B /* MDViewController.swift */,
 			);
 			path = Dayly;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */,
+				8CEF984722EE65A60093DB5B /* MDViewController.swift in Sources */,
 				8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */,
 				8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */,
 				8CE7366D22DF9DB200996D91 /* SignUpViewController.swift in Sources */,
 				8CF0AA1122D7D36800A5D17E /* ViewController.swift in Sources */,
+				8CF2E60B22F8D61F00A3BC2A /* MoreInfoViewController.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
 				8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */,
 			);
