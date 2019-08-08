@@ -51,7 +51,9 @@ class SignUpViewController: ViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var tosList: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
     var maleButton = false
     var femaleButton = false
     var otherButton = false
@@ -68,101 +70,125 @@ class SignUpViewController: ViewController {
 
         // Do any additional setup after loading the view.
         addDesigns()
-        let image  = UIImage(named:"icons8-left-24")
-        back.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
-        back.tintColor = UIColor.init(red: 3/255, green: 132/255,
+        
+        let image  = UIImage(named:"icons8-left-100-2")
+        backButton.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+        backButton.tintColor = UIColor.init(red: 3/255, green: 132/255,
                                       blue: 252/255, alpha: 1)
+        male.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+        female.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+         otherGender.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+         MD.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+         Patient.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+        Vistor.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+         TOS.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+   
+         otherGender.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        female.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        otherGender.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        MD.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        Patient.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        Vistor.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        TOS.tintColor = UIColor.init(red: 3/255, green: 132/255,
+                                      blue: 252/255, alpha: 1)
+        
     }
     
     @IBAction func maleSwitch(_ sender: Any) {
         if maleButton{
-            male.setBackgroundImage(unchecked, for: .normal)
+            male.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             maleButton = false
         }else{
-            male.setBackgroundImage(checked, for: .normal)
+            male.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             maleButton = true
-            female.setBackgroundImage(unchecked, for: .normal)
+            female.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             femaleButton = false
-            otherGender.setBackgroundImage(unchecked, for: .normal)
+            otherGender.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             otherButton = false
         }
     }
     
     @IBAction func femaleSwitch(_ sender: Any) {
         if femaleButton{
-            female.setBackgroundImage(unchecked, for: .normal)
+            female.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             femaleButton = false
         }else{
-            female.setBackgroundImage(checked, for: .normal)
+            female.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             femaleButton = true
-            male.setBackgroundImage(unchecked, for: .normal)
+            male.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             maleButton = false
-            otherGender.setBackgroundImage(unchecked, for: .normal)
+            otherGender.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             otherButton = false
         }
     }
     @IBAction func otherSwitch(_ sender: Any) {
         if otherButton{
-            otherGender.setBackgroundImage(unchecked, for: .normal)
+            otherGender.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             otherButton = false
         }else{
-            otherGender.setBackgroundImage(checked, for: .normal)
+            otherGender.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             otherButton = true
-            male.setBackgroundImage(unchecked, for: .normal)
+            male.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             maleButton = false
-            female.setBackgroundImage(unchecked, for: .normal)
+            female.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             femaleButton = false
         }
     }
     
     @IBAction func MDSwitch(_ sender: Any) {
         if MDButton{
-            MD.setBackgroundImage(unchecked, for: .normal)
+            MD.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             MDButton = false
         }else{
-            MD.setBackgroundImage(checked, for: .normal)
+            MD.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             MDButton = true
-            Vistor.setBackgroundImage(unchecked, for: .normal)
+            Vistor.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             vistorButton = false
-            Patient.setBackgroundImage(unchecked, for: .normal)
+            Patient.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             patientButton = false
         }
     }
     
     @IBAction func VisitorButton(_ sender: Any) {
         if vistorButton{
-            Vistor.setBackgroundImage(unchecked, for: .normal)
+            Vistor.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             vistorButton = false
         }else{
-            Vistor.setBackgroundImage(checked, for: .normal)
+            Vistor.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             vistorButton = true
-            MD.setBackgroundImage(unchecked, for: .normal)
+            MD.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             MDButton = false
-            Patient.setBackgroundImage(unchecked, for: .normal)
+            Patient.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             patientButton = false
         }
     }
     
     @IBAction func patientSwitch(_ sender: Any) {
         if patientButton{
-            Patient.setBackgroundImage(unchecked, for: .normal)
+            Patient.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             patientButton = false
         }else{
-            Patient.setBackgroundImage(checked, for: .normal)
+            Patient.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             patientButton = true
-            MD.setBackgroundImage(unchecked, for: .normal)
+            MD.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             MDButton = false
-            Vistor.setBackgroundImage(unchecked, for: .normal)
+            Vistor.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             vistorButton = false
         }
     }
     
     @IBAction func terms(_ sender: Any) {
         if tosButton{
-            TOS.setBackgroundImage(unchecked, for: .normal)
+            TOS.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             tosButton = false
         }else{
-            TOS.setBackgroundImage(checked, for: .normal)
+            TOS.setImage(checked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
             tosButton = true
         }
     }
@@ -175,7 +201,7 @@ class SignUpViewController: ViewController {
         Designs.styleTextField(DOBYear)
 
         Designs.styleFilledButton(nextButton)
-        Designs.styleHollowButton(back)
+        //Designs.styleHollowButton(back)
     }
     
     
