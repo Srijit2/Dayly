@@ -759,10 +759,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRe-NR-6c0">
-                                <rect key="frame" x="263" y="823" width="94" height="30"/>
+                                <rect key="frame" x="52" y="823" width="310" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="getData:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="KO3-d7-Zam"/>
                                     <segue destination="rm8-i7-B3u" kind="show" id="azG-eK-BQl"/>
                                 </connections>
                             </button>
@@ -834,36 +835,57 @@
                                 <rect key="frame" x="194" y="451" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="certYear:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="JyN-Fv-3WM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnL-KA-oir">
                                 <rect key="frame" x="306" y="451" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="noCert:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="eMr-t7-zPN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3p-8u-Nc6">
                                 <rect key="frame" x="241" y="489" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="nonCertYear:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="3IM-IZ-q3Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0s-LO-bA4">
                                 <rect key="frame" x="311" y="563" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="otherSwitch:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="0lz-sQ-xBe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-Eq-lmA">
                                 <rect key="frame" x="192" y="563" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="femaleSwitch:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="UFU-dQ-GBY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzV-qy-r57">
                                 <rect key="frame" x="74" y="563" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="maleSwitch:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="FIH-Nl-ZfQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izE-YY-Yrh">
                                 <rect key="frame" x="56" y="786" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="tos:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="Gwx-5z-0cA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGg-Pu-3mM">
                                 <rect key="frame" x="20" y="44" width="60" height="41"/>
@@ -884,6 +906,9 @@
                                 <rect key="frame" x="92" y="622" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="availableAll:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="EJD-D6-TPS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="new patients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkt-JF-mpv">
                                 <rect key="frame" x="56" y="668" width="104" height="22"/>
@@ -903,6 +928,9 @@
                                 <rect key="frame" x="292" y="622" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="availableSome:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="fY2-FV-TnY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="my own patients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0g-XS-dGi">
                                 <rect key="frame" x="239" y="667" width="132" height="22"/>
@@ -922,11 +950,17 @@
                                 <rect key="frame" x="196" y="719" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="contactOff:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="xll-Bj-rHa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-qV-mGM">
                                 <rect key="frame" x="89" y="719" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="contactMe:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="wVZ-C7-dF8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Social Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-8W-APC">
                                 <rect key="frame" x="272" y="748" width="103" height="22"/>
@@ -939,6 +973,9 @@
                                 <rect key="frame" x="308" y="719" width="27" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="25235"/>
+                                <connections>
+                                    <action selector="social:" destination="Hiq-sD-fVy" eventType="touchUpInside" id="lUJ-ls-eH3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BST-4c-cpc">
                                 <rect key="frame" x="174" y="747" width="65" height="22"/>
@@ -991,7 +1028,7 @@
         <!--Item-->
         <scene sceneID="jYz-Jp-trr">
             <objects>
-                <viewController id="rm8-i7-B3u" customClass="MoreInfoViewController" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rm8-i7-B3u" customClass="MoreInfoStep2" customModule="Dayly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qd0-L6-TNB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1130,11 +1167,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="syx-sf-QPZ"/>
                     <connections>
+                        <outlet property="BMI" destination="2iu-9J-V2t" id="jev-z4-px2"/>
+                        <outlet property="calculateBMI" destination="qEr-wq-R3G" id="gts-NA-ctB"/>
                         <outlet property="calculateButton" destination="qEr-wq-R3G" id="zS3-2H-UDO"/>
+                        <outlet property="cont" destination="sUl-bp-KCk" id="7cH-QC-xSq"/>
+                        <outlet property="frequency" destination="TEQ-e1-nUE" id="Cwp-Sl-JBi"/>
+                        <outlet property="heightInCM" destination="IYF-ek-6YY" id="SHs-N9-ben"/>
                         <outlet property="heightInCm" destination="IYF-ek-6YY" id="7dy-Xa-Afq"/>
-                        <outlet property="heightInInches" destination="ZbU-w1-hNF" id="K50-xA-rzt"/>
+                        <outlet property="heightInInches" destination="ZbU-w1-hNF" id="cZy-vF-9vL"/>
+                        <outlet property="nameOfMedicine" destination="2FF-Ci-UYq" id="MRY-Cl-3fn"/>
                         <outlet property="weightInKG" destination="zgd-oL-njD" id="fFH-JG-Om7"/>
+                        <outlet property="weightInKgs" destination="zgd-oL-njD" id="J30-56-dse"/>
                         <outlet property="weightInPounds" destination="EYZ-KY-ieh" id="6oj-x0-CS2"/>
+                        <outlet property="weightInlbs" destination="EYZ-KY-ieh" id="WfR-cW-Xng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAG-l8-grI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3227,6 +3272,6 @@
         <segue reference="G9m-9B-2ps"/>
         <segue reference="Yxm-cb-d7C"/>
         <segue reference="IBB-OL-dp3"/>
-        <segue reference="ioK-dX-cb1"/>
+        <segue reference="Zpx-2C-yVI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,7 @@
 		8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8C50E22EA50F300F2CECC /* Designs.swift */; };
 		8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA441A22EA431C0071671F /* StartViewController.swift */; };
 		8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */; };
+		A5E5A30A22FE0021003DF04D /* MoreInfoStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */; };
 		C2B7DBB911D0C6E0DEE7BEF2 /* Pods_Dayly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBE8552274DD5620D830557 /* Pods_Dayly.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8E6EC4239F39134B6B61F12C /* Pods-DaylyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyUITests.release.xcconfig"; path = "Target Support Files/Pods-DaylyUITests/Pods-DaylyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		96373128A5928B3DEED9C505 /* Pods-DaylyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaylyTests.release.xcconfig"; path = "Target Support Files/Pods-DaylyTests/Pods-DaylyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoStep2.swift; sourceTree = "<group>"; };
 		F4E9E22C2F37941EF459A009 /* Pods-Dayly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dayly.debug.xcconfig"; path = "Target Support Files/Pods-Dayly/Pods-Dayly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */,
 				8CF8C50E22EA50F300F2CECC /* Designs.swift */,
 				8CEF984622EE65A60093DB5B /* MDViewController.swift */,
+				A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */,
 			);
 			path = Dayly;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				8CF2E60B22F8D61F00A3BC2A /* MoreInfoViewController.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
 				8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */,
+				A5E5A30A22FE0021003DF04D /* MoreInfoStep2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

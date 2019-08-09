@@ -11,7 +11,7 @@ import Firebase
 
 class SignUpViewController: ViewController {
 
-   
+    static var ref: DocumentReference? = nil
 //    @IBOutlet weak var login: UIButton!
 //    @IBOutlet weak var signup: UIButton!
 //    @IBOutlet weak var passwordConfirm: UITextField!
@@ -219,14 +219,19 @@ class SignUpViewController: ViewController {
             let emailID = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in
                 if error == nil {
-                    db.collection("users").addDocument(data: ["email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.maleButton, "female": self.femaleButton, "other": self.otherButton, "MD": self.MDButton,"visitor": self.vistorButton,"patient": self.patientButton, "tos": self.tosButton,
-                                                              "DOBYear": self.DOBYear.text!,
-                                                              "uid": user!.user.uid]){(error) in
-                                                                if error != nil {
-                                                                    
-                                                                }
-                                                                
-                    }
+                    SignUpViewController.ref = db.collection("users").document()
+                    SignUpViewController.ref!.setData([
+                        "email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.maleButton, "female": self.femaleButton, "other": self.otherButton, "MD": self.MDButton,"visitor": self.vistorButton,"patient": self.patientButton, "tos": self.tosButton,
+                        "DOBYear": self.DOBYear.text!,
+                        "uid": user!.user.uid])
+//                    SignUpViewController.ref =  db.collection("users").addDocument(data: ["email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.maleButton, "female": self.femaleButton, "other": self.otherButton, "MD": self.MDButton,"visitor": self.vistorButton,"patient": self.patientButton, "tos": self.tosButton,
+//                                                              "DOBYear": self.DOBYear.text!,
+//                                                              "uid": user!.user.uid]){(error) in
+//                                                                if error != nil {
+//
+//                                                                }
+//
+//                    }
                     self.performSegue(withIdentifier: "signupToHome", sender: self)
                 }
                 else{
