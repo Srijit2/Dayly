@@ -9,7 +9,7 @@ import Firebase
 import UIKit
 
 class MoreInfoStep2: UIViewController {
-//let db = Firestore.firestore()
+let db = Firestore.firestore()
     @IBOutlet weak var weightInlbs: UITextField!
     
     @IBOutlet weak var weightInKgs: UITextField!
@@ -32,37 +32,37 @@ class MoreInfoStep2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = Auth.auth().currentUser
-//        if let user = user{
-//
-//let id = user.uid
-//        // Do any additional setup after loading the view.
-//        db.collection("users").whereField("uid", isEqualTo: id).getDocuments{ (snapshot, error) in
-//
-        //if error != nil{
-//                print(error)
-//            }else{
-//                for document in (snapshot?.documents)!{
-//                    let weight = document.data()["weightInlbs"]
-//                    self.weightInlbs.text = weight as? String
-//                    let height = document.data()["heightInInches"]
-//                    self.heightInInches.text = height as? String
-//                    let BMI = document.data()["BMI"]
-//                    self.BMI.text = BMI as? String
-//                    let med = document.data()["Medicine"]
-//                    self.nameOfMedicine.text = med as? String
-//                    let fre = document.data()["frequency"]
-//                    self.frequency.text = fre as? String
-//
-//                }
-//
-//            }
-//            }
-//        }
+        if let user = user{
+
+let id = user.uid
+        // Do any additional setup after loading the view.
+        db.collection("users").whereField("uid", isEqualTo: id).getDocuments{ (snapshot, error) in
+
+        if error != nil{
+                print(error)
+            }else{
+                for document in (snapshot?.documents)!{
+                    let weight = document.data()["weightInlbs"]
+                    self.weightInlbs.text = weight as? String
+                    let height = document.data()["heightInInches"]
+                    self.heightInInches.text = height as? String
+                    let BMI = document.data()["BMI"]
+                    self.BMI.text = BMI as? String
+                    let med = document.data()["Medicine"]
+                    self.nameOfMedicine.text = med as? String
+                    let fre = document.data()["frequency"]
+                    self.frequency.text = fre as? String
+
+                }
+
+            }
+            }
+        }
         addDesigns()
-        let image  = UIImage(named:"icons8-left-100-2")
-        back.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
-        back.tintColor = UIColor.init(red: 3/255, green: 132/255,
-                                            blue: 252/255, alpha: 1)
+//        let image  = UIImage(named:"icons8-left-100-2")
+//        back.setImage(image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+//        back.tintColor = UIColor.init(red: 3/255, green: 132/255,
+//                                            blue: 252/255, alpha: 1)
     }
     
     @IBAction func calcBMI(_ sender: Any) {
@@ -70,8 +70,16 @@ class MoreInfoStep2: UIViewController {
         weight = 0
         if ( (weightInlbs.text! != "")){
             if(weightInlbs != nil){
+                if(self.weightInlbs.text!.isDouble || self.weightInlbs.text!.isInt){
             weight = Double(weightInlbs!.text!)
             print("end")
+                }else{
+                    let alertController = UIAlertController(title: "No valid weight", message: "Please fill a weight field", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    return
+                }
             }
         }else if false {
 //            if(weightInKgs != nil){
@@ -84,13 +92,21 @@ class MoreInfoStep2: UIViewController {
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-            print("else")
+            return
         }
         var height:Double?
         height = 0
         if  heightInInches.text! != "" {
             if(heightInInches != nil){
+                       if(self.heightInInches.text!.isDouble || self.heightInInches.text!.isInt){
             height = Double(heightInInches!.text!)
+                       }else{
+                        let alertController = UIAlertController(title: "No valid height", message: "Please fill a height field", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        return
+                }
             }
         }else if
            false
@@ -105,7 +121,7 @@ class MoreInfoStep2: UIViewController {
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
-            print("dead")
+            return
             
         }
         if (weight != nil) && height != nil{
@@ -168,8 +184,8 @@ class MoreInfoStep2: UIViewController {
         }
         
         if next{
-        let id = (SignUpViewController.ref?.documentID)!
-        SignUpViewController.ref!.setData([
+        let id = (StartViewController.ref?.documentID)!
+        StartViewController.ref!.setData([
             "weightInlbs": self.weightInlbs.text!,
             "weightInKGs": self.weightInKgs.text!,
             "heightInInches": self.heightInInches.text!,

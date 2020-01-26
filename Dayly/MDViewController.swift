@@ -267,7 +267,7 @@ let db = Firestore.firestore()
         contactMe.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
         contactOffice.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
         socialMedia.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
-        TOS.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
+//        TOS.setImage(unchecked?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate), for: .normal)
         
         maleButton.tintColor = UIColor.init(red: 3/255, green: 132/255,
                                             blue: 252/255, alpha: 1)
@@ -291,8 +291,8 @@ let db = Firestore.firestore()
                                                blue: 252/255, alpha: 1)
         socialMedia.tintColor = UIColor.init(red: 3/255, green: 132/255,
                                              blue: 252/255, alpha: 1)
-        TOS.tintColor = UIColor.init(red: 3/255, green: 132/255,
-                                     blue: 252/255, alpha: 1)
+//        TOS.tintColor = UIColor.init(red: 3/255, green: 132/255,
+//                                     blue: 252/255, alpha: 1)
         
     }
     
@@ -445,8 +445,8 @@ let db = Firestore.firestore()
         if next {
         if let user = user{
             
-            let id = (SignUpViewController.ref?.documentID)!
-            SignUpViewController.ref!.setData([
+            let id = (StartViewController.ref?.documentID)!
+            StartViewController.ref!.setData([
                 "email": self.email.text!, "username":self.username.text!, "password": self.password.text!, "DOBDay": self.DOBDay.text!,"DOBMonth": self.DOBMonth.text!,"male": self.male, "female": self.female, "other": self.other, "AvailableForAll": self.availableAll,"AvailableForSome": self.availableSome,"ContactMe": self.contactMeButton, "ContactOffice": self.contactOfficeButton,
                 "DOBYear": self.DOBYear.text!,
                 "SocialMediaAllowed": self.socialButton,

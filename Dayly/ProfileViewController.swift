@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        SignUpViewController.ref!.setData([
+       StartViewController.ref!.setData([
             "caloriesEaten": self.caloriesEaten.text!,
             "minExercise": self.minExercise.text!,
             "stepsWalked": self.stepsWalked.text!,

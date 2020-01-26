@@ -244,7 +244,7 @@ class Step3ViewController: UIViewController {
     }
     
     @IBAction func getValues(_ sender: Any) {
-        SignUpViewController.ref!.setData([
+        StartViewController.ref!.setData([
             "MaintainGoal": self.MaintainGoal.text!,
             "LoseGoal": self.loseGoal.text!,
             "isMaintain": mainWeight,

@@ -11,7 +11,25 @@ import Firebase
 import FBSDKLoginKit
 
 class StartViewController: ViewController {
+    
+        static var ref: DocumentReference? = nil
+    
+    var red = 0
+    var blue = 0
+    var green = 0
 
+    @IBOutlet weak var D: UILabel!
+    
+    @IBOutlet weak var A: UILabel!
+    
+    @IBOutlet weak var Y: UILabel!
+    
+    @IBOutlet weak var L: UILabel!
+    
+    @IBOutlet weak var Ys: UILabel!
+    
+    
+    
     @IBOutlet weak var login: UIButton!
     
     @IBOutlet weak var signup: UIButton!
@@ -21,17 +39,67 @@ class StartViewController: ViewController {
 
         // Do any additional setup after loading the view.
         addDesign()
+        setUpAnimation()
     }
+    @IBOutlet weak var colorView: UIView!
+    
+    func setUpAnimation(){
+        red = 168
+        blue = 121
+        green = 50
+        var D = UILabel()
+        var pickColor  = 0
+        colorView.backgroundColor = UIColor.init(red: 0/255, green: 240/255, blue: 240/255, alpha: 1)
+        colorView.frame = CGRect(x: 0, y: 0, width: 500, height: 448)
+        D.frame = CGRect(x: 100, y: 100, width: 20, height: 20)
+        D.text = "D"
+       // view.addSubview(colorView)
+ //       if(pickColor == 0){
+        UIView.animate(withDuration: 10, delay: 0, options: [.repeat, .autoreverse],
+                       animations: {
+                        self.colorView.backgroundColor = UIColor.init(red: 0/255, green: 280/255, blue: 240/255, alpha: 1)
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            self.colorView.backgroundColor = UIColor.init(red: 0/255, green: 120/255, blue: 240/255, alpha: 1)
+                        })
+                       
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            self.colorView.backgroundColor = UIColor.init(red: 0/255, green: 60/255, blue: 240/255, alpha: 1)
+                        })
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            self.colorView.backgroundColor = UIColor.init(red: 60/255, green: 0/255, blue: 240/255, alpha: 1)
+                        })
+                        
+          
+
+        }, completion: nil)
+
+//        }
+//        UIView.animate(withDuration: 5, delay: 0, options: [.repeat, .autoreverse],
+//                       animations: {
+//                        self.colorView.backgroundColor = UIColor.init(red: 168/255, green: 50/255, blue: 101/255, alpha: 1)
+//        }, completion: nil)
+    }
+    
+    
+    @IBOutlet weak var header: UILabel!
     
     func addDesign(){
         Designs.styleFilledButton(login)
         Designs.styleHollowButton(signup)
+       header.textColor = .white
+//        A.font = UIFont.boldSystemFont(ofSize: 32.0)
+//        Y.font = UIFont.boldSystemFont(ofSize: 32.0)
+//        L.font = UIFont.boldSystemFont(ofSize: 32.0)
+//        Ys.font = UIFont.boldSystemFont(ofSize: 32.0)
     }
     
     override func viewDidAppear(_ animated: Bool){
 //        super.viewDidAppear(animated)
 //        if Auth.auth().currentUser != nil {
-//            self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+//           self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
 //        }
     }
     
