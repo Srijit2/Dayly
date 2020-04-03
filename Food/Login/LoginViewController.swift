@@ -17,7 +17,8 @@ class LoginViewController: ViewController {
     @IBOutlet weak var email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.title = "Login"
         // Do any additional setup after loading the view.
         addDesigns()
     }

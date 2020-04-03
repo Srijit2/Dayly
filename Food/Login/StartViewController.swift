@@ -36,7 +36,7 @@ class StartViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
         addDesign()
         setUpAnimation()
@@ -99,7 +99,7 @@ class StartViewController: ViewController {
     override func viewDidAppear(_ animated: Bool){
 //        super.viewDidAppear(animated)
 //        if Auth.auth().currentUser != nil {
-//           self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
+//           self.performSegue(withIdentifier: "test", sender: nil)
 //        }
     }
     

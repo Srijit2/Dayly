@@ -32,6 +32,9 @@
 		A5E5A34E23031C79003DF04D /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A34D23031C79003DF04D /* BMI.swift */; };
 		A5E5A350230323E0003DF04D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A34F230323E0003DF04D /* ProfileViewController.swift */; };
 		A5E5A35223032A2D003DF04D /* FoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */; };
+		A5E9140324355BD2007B4E60 /* FoodSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E9140224355BD2007B4E60 /* FoodSearchViewController.swift */; };
+		A5E9140524355EBE007B4E60 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E9140424355EBE007B4E60 /* Food.swift */; };
+		A5E9140724355EC8007B4E60 /* FoodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E9140624355EC8007B4E60 /* FoodRequest.swift */; };
 		C2B7DBB911D0C6E0DEE7BEF2 /* Pods_Dayly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBE8552274DD5620D830557 /* Pods_Dayly.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,9 @@
 		A5E5A34D23031C79003DF04D /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		A5E5A34F230323E0003DF04D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLogViewController.swift; sourceTree = "<group>"; };
+		A5E9140224355BD2007B4E60 /* FoodSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchViewController.swift; sourceTree = "<group>"; };
+		A5E9140424355EBE007B4E60 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		A5E9140624355EC8007B4E60 /* FoodRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRequest.swift; sourceTree = "<group>"; };
 		F4E9E22C2F37941EF459A009 /* Pods-Dayly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dayly.debug.xcconfig"; path = "Target Support Files/Pods-Dayly/Pods-Dayly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +143,9 @@
 		8CF0AA0222D7D36800A5D17E = {
 			isa = PBXGroup;
 			children = (
+				8CF0AA1222D7D36800A5D17E /* Main.storyboard */,
+				8CF8C50E22EA50F300F2CECC /* Designs.swift */,
+				A5C6E93E2436B3F800929912 /* Food */,
 				8CF0AA0D22D7D36800A5D17E /* Dayly */,
 				8CF0AA2222D7D36E00A5D17E /* DaylyTests */,
 				8CF0AA2D22D7D36E00A5D17E /* DaylyUITests */,
@@ -160,9 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				8CF0AA0E22D7D36800A5D17E /* AppDelegate.swift */,
-				8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */,
 				8CF0AA1022D7D36800A5D17E /* ViewController.swift */,
-				8CF0AA1222D7D36800A5D17E /* Main.storyboard */,
 				A5E5A35123032A2D003DF04D /* FoodLogViewController.swift */,
 				A5E5A34F230323E0003DF04D /* ProfileViewController.swift */,
 				A5E5A34D23031C79003DF04D /* BMI.swift */,
@@ -175,10 +182,6 @@
 				8CF0AA1722D7D36E00A5D17E /* LaunchScreen.storyboard */,
 				8CF0AA3C22D7D6F000A5D17E /* GoogleService-Info.plist */,
 				8CF0AA1A22D7D36E00A5D17E /* Info.plist */,
-				8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */,
-				8CFA441A22EA431C0071671F /* StartViewController.swift */,
-				8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */,
-				8CF8C50E22EA50F300F2CECC /* Designs.swift */,
 				8CEF984622EE65A60093DB5B /* MDViewController.swift */,
 				A5E5A30922FE0021003DF04D /* MoreInfoStep2.swift */,
 			);
@@ -201,6 +204,28 @@
 				8CF0AA3022D7D36E00A5D17E /* Info.plist */,
 			);
 			path = DaylyUITests;
+			sourceTree = "<group>";
+		};
+		A5C6E93E2436B3F800929912 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				A5E9140424355EBE007B4E60 /* Food.swift */,
+				A5E9140624355EC8007B4E60 /* FoodRequest.swift */,
+				A5E9140224355BD2007B4E60 /* FoodSearchViewController.swift */,
+				A5C6E93F2436B40D00929912 /* Login */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		A5C6E93F2436B40D00929912 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8CE7366E22DF9E4E00996D91 /* LoginViewController.swift */,
+				8CFCFDE522E8F23200A76D52 /* HomeViewController.swift */,
+				8CE7366C22DF9DB200996D91 /* SignUpViewController.swift */,
+				8CFA441A22EA431C0071671F /* StartViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A7EFA002BD1B21C3323DA8EC /* Frameworks */ = {
@@ -436,9 +461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CFCFDE622E8F23300A76D52 /* HomeViewController.swift in Sources */,
+				A5E9140724355EC8007B4E60 /* FoodRequest.swift in Sources */,
 				8CEF984722EE65A60093DB5B /* MDViewController.swift in Sources */,
 				A5E5A30E2302248B003DF04D /* Step3ViewController.swift in Sources */,
 				A5E5A31223030907003DF04D /* LoseViewController.swift in Sources */,
+				A5E9140524355EBE007B4E60 /* Food.swift in Sources */,
 				8CF8C50F22EA50F400F2CECC /* Designs.swift in Sources */,
 				8CE7366F22DF9E4E00996D91 /* LoginViewController.swift in Sources */,
 				A5E5A350230323E0003DF04D /* ProfileViewController.swift in Sources */,
@@ -449,6 +476,7 @@
 				8CF2E60B22F8D61F00A3BC2A /* MoreInfoViewController.swift in Sources */,
 				A5E5A34E23031C79003DF04D /* BMI.swift in Sources */,
 				8CF0AA0F22D7D36800A5D17E /* AppDelegate.swift in Sources */,
+				A5E9140324355BD2007B4E60 /* FoodSearchViewController.swift in Sources */,
 				8CFA441B22EA431C0071671F /* StartViewController.swift in Sources */,
 				A5E5A31023030738003DF04D /* MaintainViewController.swift in Sources */,
 				A5E5A30A22FE0021003DF04D /* MoreInfoStep2.swift in Sources */,
